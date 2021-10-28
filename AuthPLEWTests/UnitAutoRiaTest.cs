@@ -12,7 +12,7 @@ namespace AuthPLEWTests
         public void SetUp()
         {
             _driver = new OpenQA.Selenium.Firefox.FirefoxDriver();
-            _driver.Navigate().GoToUrl("https://auto.ria.com/");
+            _driver.Navigate().GoToUrl("https://auto.ria.com/");//I suggest to create base class with setup method where you could specify browser and link.
 
         }
         [Test]
