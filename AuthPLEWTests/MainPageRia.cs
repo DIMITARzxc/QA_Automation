@@ -24,13 +24,13 @@ namespace AuthPLEWTests
             By.CssSelector("ul[class='unstyle scrollbar autocomplete-select'] > li > a")).ToList();
         private List<IWebElement> FormButtonElements => _driver._driver.FindElements(
     By.CssSelector("button")).ToList();
-        public void Region()
+        public void Region()// I suggest to make these methods more universal, could you pass a string as a parameter to search a city depending on passed param
         {
             RegionForm.Click();
-            FormAElements.Where(a => a.Text.Contains("Харків"))
+            FormAElements.Where(a => a.Text.Contains("Харків"))// what is FormAElements, maybe you mean FormElements? 
                 .First().Click();
         }
-        public void Brand()
+        public void Brand()// what is brand()? please give a more understandable method name for example => SelectBrand. the same for the all methods; 
         {
             BrandForm.Click();
             FormAElements.Where(a => a.Text.Contains("Audi"))
